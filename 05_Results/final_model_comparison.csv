@@ -1,0 +1,4 @@
+Model,Accuracy_0%,Accuracy_40%,Drop_Points
+Logistic Regression,0.985455,0.904727,8.072727
+Decision Tree,0.992727,0.938909,5.381818
+Random Forest,0.996364,0.979636,1.672727

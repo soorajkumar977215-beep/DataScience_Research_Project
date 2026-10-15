@@ -1,0 +1,13 @@
+Discussion
+
+The results generally support the main hypothesis that increasing missing data can reduce machine learning prediction performance. However, the effect was different for the three models used in this study.
+
+Logistic Regression showed the largest decrease in performance as missing data increased. Decision Tree also showed a noticeable decrease, while Random Forest showed the smallest overall decrease in this experimental setup.
+
+These results suggest that different machine learning models may have different levels of sensitivity to missing data. Random Forest maintained relatively high performance even at higher missing-data levels, while Logistic Regression experienced a larger decrease.
+
+The repeated experiments were important because different random missing-data patterns produced some variation in model performance. Therefore, using only one missing-data pattern could give a less reliable view of the effect.
+
+The comparison of mean and median imputation showed that neither method was consistently better at every missing-data level. Their differences were generally small at lower missing-data levels, while median imputation performed better at 40% missing data for all three models.
+
+The findings should be interpreted within the limitations of the study. The experiments used one dataset, three machine learning models, artificially generated random missing values, and two simple imputation methods. Therefore, the results cannot be generalized to all datasets or real-world missing-data situations.

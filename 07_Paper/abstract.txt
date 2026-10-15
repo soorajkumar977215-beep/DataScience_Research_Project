@@ -1,0 +1,9 @@
+Abstract
+
+Missing data is a common problem in real-world datasets and can affect the performance of machine learning models. This study investigates how different levels of missing data affect the prediction performance of basic machine learning models.
+
+The Banknote Authentication dataset was used in this study. Missing values were artificially introduced into the training data at six levels: 0%, 5%, 10%, 20%, 30%, and 40%. Three machine learning models were evaluated: Logistic Regression, Decision Tree, and Random Forest. Multiple random seeds were used to repeat the missing-data experiments. Model performance was evaluated using accuracy and F1 score. Mean and median imputation were also compared as simple missing-data preprocessing methods.
+
+The results showed that increasing missing data generally reduced model performance. Logistic Regression showed the largest decrease in mean accuracy, from 98.55% at 0% missing data to 90.47% at 40% missing data. Decision Tree decreased from 99.27% to 93.89%, while Random Forest decreased from 99.64% to 97.96%. In this experimental setup, Random Forest showed the smallest overall performance decrease. The comparison of mean and median imputation showed that their differences were generally small at lower missing-data levels, while median imputation produced higher mean accuracy at 40% missing data for all three models.
+
+Overall, the findings indicate that increasing missing data can negatively affect machine learning prediction performance and that different models can respond differently to missing data.

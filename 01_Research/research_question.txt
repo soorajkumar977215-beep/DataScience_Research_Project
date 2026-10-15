@@ -1,0 +1,16 @@
+Research Question
+
+Main Research Question:
+
+How does missing data affect the performance of basic machine learning models?
+
+
+Sub-Questions:
+
+1. How does model performance change when the dataset contains different levels of missing data?
+
+2. Do different machine learning models respond differently to missing data?
+
+3. Which missing-data level causes the largest change in model performance?
+
+4. Can simple data preprocessing methods reduce the effect of missing data on model performance?

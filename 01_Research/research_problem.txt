@@ -1,0 +1,7 @@
+Research Problem
+
+Machine learning is widely used to make predictions from data. However, real-world datasets often contain missing values because of data entry errors, incomplete records, system problems, or other reasons.
+
+Missing data can affect the quality of a dataset and may also affect the performance of machine learning models. Different machine learning models may respond differently when some values are missing.
+
+Therefore, this project will investigate how missing data affects the prediction performance of basic machine learning models. The study will compare model performance under different levels of missing data using the same dataset and evaluation method.

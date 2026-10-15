@@ -1,0 +1,13 @@
+Future Work
+
+Future studies can extend this work in several directions.
+
+First, the experiments can be repeated using multiple datasets from different domains to determine whether similar patterns are observed.
+
+Second, future work can investigate different missing-data mechanisms instead of only randomly introducing missing values. For example, missing data can be generated under different assumptions about why values are missing.
+
+Third, more machine learning models can be compared, including K-Nearest Neighbors, Support Vector Machines, and other classification algorithms.
+
+Fourth, additional missing-data handling methods can be evaluated. These may include KNN imputation, iterative imputation, and multiple imputation methods.
+
+Finally, future experiments can use additional evaluation metrics and different train-test splits or cross-validation to provide a more extensive evaluation of model performance.

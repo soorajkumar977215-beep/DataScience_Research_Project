@@ -1,0 +1,15 @@
+Results
+
+The repeated experiments showed that increasing missing data generally reduced the performance of the machine learning models. However, the amount of performance reduction was different for each model.
+
+At 0% missing data, Logistic Regression achieved a mean accuracy of 98.55%, Decision Tree achieved 99.27%, and Random Forest achieved 99.64%.
+
+At 40% missing data, Logistic Regression achieved a mean accuracy of 90.47%, Decision Tree achieved 93.89%, and Random Forest achieved 97.96%.
+
+The overall decrease from 0% to 40% missing data was 8.07 percentage points for Logistic Regression, 5.38 percentage points for Decision Tree, and 1.67 percentage points for Random Forest.
+
+Random Forest showed the smallest overall decrease in mean accuracy in this experimental setup. Logistic Regression showed the largest decrease.
+
+The repeated experiments also showed some variation between different missing-data patterns. At 40% missing data, the standard deviation of accuracy was approximately 1.16% for Logistic Regression, 2.56% for Decision Tree, and 0.71% for Random Forest.
+
+The comparison of mean and median imputation showed that the difference between the two methods was generally small at lower missing-data levels. At 40% missing data, median imputation produced higher mean accuracy than mean imputation for all three models.

@@ -1,0 +1,15 @@
+Study Limitations
+
+This study has several limitations.
+
+First, the study uses only one dataset, the Banknote Authentication dataset. Therefore, the findings may not represent the behavior of machine learning models on other types of datasets.
+
+Second, missing values were introduced artificially into the training data. The missing values were generated randomly at different percentages. Real-world missing data may occur through different mechanisms and may not be completely random.
+
+Third, the study compares only three basic machine learning models: Logistic Regression, Decision Tree, and Random Forest. Other machine learning algorithms may respond differently to missing data.
+
+Fourth, the study uses a fixed 80:20 train-test split. Although multiple missing-data seeds were used, different train-test splits may produce different results.
+
+Fifth, only mean and median imputation were compared. Other missing-data handling methods, such as mode imputation, KNN imputation, or multiple imputation, were not investigated.
+
+Finally, the study evaluates the models using one dataset and a controlled experimental setup. Therefore, the results should be interpreted as findings from this experimental setting rather than general conclusions about all machine learning applications.

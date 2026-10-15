@@ -1,0 +1,13 @@
+Hypothesis
+
+Main Hypothesis:
+
+Increasing the amount of missing data is expected to reduce the prediction performance of machine learning models.
+
+Secondary Hypotheses:
+
+1. Different machine learning models are expected to respond differently to missing data.
+
+2. Higher levels of missing data are expected to have a larger effect on model performance.
+
+3. Simple missing-data preprocessing methods may reduce some of the negative effect of missing data on model performance.

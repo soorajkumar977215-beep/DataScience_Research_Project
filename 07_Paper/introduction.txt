@@ -1,0 +1,11 @@
+Introduction
+
+Machine learning is widely used for prediction and classification tasks in many different areas. Machine learning models learn patterns from available data and use these patterns to make predictions. The quality of the data can therefore have an important effect on model performance.
+
+One common problem in real-world datasets is missing data. Missing values can occur because of incomplete records, data entry problems, system errors, or other reasons. When important values are missing, machine learning models may not be able to use all the available information effectively. Therefore, missing data needs to be considered when developing and evaluating machine learning models.
+
+Previous research has investigated the effect of missing data on machine learning prediction. Marlin (2008) studied learning, inference, and prediction with missing data and investigated different approaches for handling missing information. Radišić, Seljan, and Dunđer (2023) examined the effect of missing values and different imputation methods on several machine learning algorithms. Their results showed that the effect of missing-data treatment can differ between machine learning models.
+
+Although previous studies have investigated missing data and different methods for handling it, this study focuses on a controlled experiment using different levels of missing data under the same experimental setup. The study introduces different percentages of missing values into the training data and measures how the performance of basic machine learning models changes.
+
+The main objective of this study is to investigate how different levels of missing data affect the prediction performance of Logistic Regression, Decision Tree, and Random Forest models. The study also compares mean and median imputation to examine whether simple preprocessing methods can reduce the effect of missing data on model performance.

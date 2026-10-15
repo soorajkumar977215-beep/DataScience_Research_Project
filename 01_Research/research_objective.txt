@@ -1,0 +1,9 @@
+Research Objective
+
+The main objective of this study is to investigate how different levels of missing data affect the performance of basic machine learning models.
+
+The study will introduce different percentages of missing values into a dataset and evaluate model performance using the same experimental setup.
+
+The study will also compare the performance of different machine learning models under different levels of missing data.
+
+Finally, the study will examine whether simple missing-data preprocessing methods can reduce the negative effect of missing data on model performance.

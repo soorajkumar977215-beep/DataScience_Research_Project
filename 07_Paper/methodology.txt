@@ -1,0 +1,41 @@
+Methodology
+
+Dataset
+
+The Banknote Authentication dataset was used for this study. The dataset contains 1,372 observations and four numerical input features: variance, skewness, curtosis, and entropy. The target variable is the class of the banknote, which represents whether the banknote is genuine or forged.
+
+Data Preparation
+
+The dataset was checked before the experiments to understand its structure, data types, missing values, and class distribution. The original dataset did not contain missing values. The four numerical features were used as input variables, while the class variable was used as the target variable.
+
+The dataset was divided into training and testing sets using an 80:20 split. Stratified splitting was used to maintain the class distribution in both sets. A fixed random state of 42 was used for the train-test split.
+
+Machine Learning Models
+
+Three basic machine learning models were selected for the experiments:
+
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+
+These models were selected to compare the effect of missing data across different types of machine learning models.
+
+Missing Data Experiment
+
+Missing values were artificially introduced into the training data at six different levels: 0%, 5%, 10%, 20%, 30%, and 40%.
+
+The test data was kept clean during the experiments. This allowed the models to be evaluated on the same complete test data at each missing-data level.
+
+For each missing-data level, multiple random seeds were used to generate different missing-data patterns. Five random seeds were used: 10, 20, 30, 40, and 42.
+
+Missing Data Imputation
+
+Median imputation was used in the repeated missing-data experiment. The imputer was fitted only on the training data and then applied to the training data containing missing values. The clean test data was not used to calculate the imputation values.
+
+A separate experiment was also conducted to compare mean and median imputation at each missing-data level.
+
+Evaluation
+
+Model performance was evaluated using accuracy and F1 score. Mean performance and standard deviation were calculated across the five missing-data random seeds.
+
+The results were compared across different missing-data levels and machine learning models to determine how increasing missing data affected prediction performance.
