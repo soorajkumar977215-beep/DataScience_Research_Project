@@ -89,15 +89,35 @@ for level in missing_levels:
                 "f1_score": f1_score(y_test, predictions),
             })
 
+
 output_dir = PROJECT_DIR / "05_Results"
 output_dir.mkdir(exist_ok=True)
 
-results_file = output_dir / "experiment_runs_new.csv"
-pd.DataFrame(results).to_csv(results_file, index=False)
+results_df = pd.DataFrame(results)
+
+# Save all 90 individual experiment runs
+runs_file = output_dir / "experiment_runs_new.csv"
+results_df.to_csv(runs_file, index=False)
+
+# Create a summary from these exact same runs
+summary_df = (
+    results_df
+    .groupby(["missing_percent", "model"])
+    .agg(
+        Mean_Accuracy=("accuracy", "mean"),
+        Std_Accuracy=("accuracy", "std"),
+        Mean_F1=("f1_score", "mean"),
+        Std_F1=("f1_score", "std"),
+    )
+    .reset_index()
+)
+
+# Save to a new file; preserve all previous results
+summary_file = output_dir / "experiment_runs_new_summary.csv"
+summary_df.to_csv(summary_file, index=False)
 
 print(f"Dataset rows: {len(data)}")
-print(f"Experiment runs saved: {len(results)}")
-print(f"Results file: {results_file}")
-print(pd.DataFrame(results).groupby(
-    ["missing_percent", "model"]
-)[["accuracy", "f1_score"]].mean().round(4))
+print(f"Individual runs: {len(results_df)}")
+print(f"Runs saved to: {runs_file}")
+print(f"Summary saved to: {summary_file}")
+print(summary_df.round(4).to_string(index=False))
