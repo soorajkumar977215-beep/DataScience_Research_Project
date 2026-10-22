@@ -1,41 +1,43 @@
-Methodology
+# Methodology
 
-Dataset
+## Dataset
 
-The Banknote Authentication dataset was used for this study. The dataset contains 1,372 observations and four numerical input features: variance, skewness, curtosis, and entropy. The target variable is the class of the banknote, which represents whether the banknote is genuine or forged.
+The Banknote Authentication dataset was used in this study. It contains 1,372 observations and four numerical input features: variance, skewness, curtosis, and entropy. The target variable represents the banknote class, distinguishing genuine from forged banknotes.
 
-Data Preparation
+## Data Preparation
 
-The dataset was checked before the experiments to understand its structure, data types, missing values, and class distribution. The original dataset did not contain missing values. The four numerical features were used as input variables, while the class variable was used as the target variable.
+The dataset was loaded and examined to understand its structure and variables. The original dataset contained no missing values. The four numerical features were used as input variables, and the class column was used as the target variable.
 
-The dataset was divided into training and testing sets using an 80:20 split. Stratified splitting was used to maintain the class distribution in both sets. A fixed random state of 42 was used for the train-test split.
+The dataset was divided into training and testing sets using an 80:20 split. Stratified sampling was applied to preserve the class distribution in both sets. The split used a fixed random state of 42, resulting in 1,097 training observations and 275 testing observations.
 
-Machine Learning Models
+## Machine Learning Models
 
-Three basic machine learning models were selected for the experiments:
+Three classification algorithms were evaluated:
 
 1. Logistic Regression
 2. Decision Tree
 3. Random Forest
 
-These models were selected to compare the effect of missing data across different types of machine learning models.
+These models were selected to examine how different classification approaches respond to increasing levels of missing input data.
 
-Missing Data Experiment
+## Missing Data Experiment
 
-Missing values were artificially introduced into the training data at six different levels: 0%, 5%, 10%, 20%, 30%, and 40%.
+Artificial missing values were introduced into the training features at six levels: 0%, 5%, 10%, 20%, 30%, and 40%. The test set remained unchanged and complete throughout the experiments.
 
-The test data was kept clean during the experiments. This allowed the models to be evaluated on the same complete test data at each missing-data level.
+Five random seeds (10, 20, 30, 40, and 42) were used to generate different missing-data patterns at each non-zero missing-data level. The same generated training-data pattern was used for all three models within each seed and missing-data level, supporting a consistent comparison.
 
-For each missing-data level, multiple random seeds were used to generate different missing-data patterns. Five random seeds were used: 10, 20, 30, 40, and 42.
+The experiment comprised 90 model runs: six missing-data levels, five seeds, and three models.
 
-Missing Data Imputation
+## Missing Data Imputation
 
-Median imputation was used in the repeated missing-data experiment. The imputer was fitted only on the training data and then applied to the training data containing missing values. The clean test data was not used to calculate the imputation values.
+Median imputation was used in the repeated missing-data experiment. Each model's imputation procedure was fitted using the training data only, preventing information from the test set from influencing the imputation values.
 
-A separate experiment was also conducted to compare mean and median imputation at each missing-data level.
+Logistic Regression was evaluated without feature standardization in the final experiment. Decision Tree and Random Forest were also evaluated using median imputation, without feature standardization.
 
-Evaluation
+A separate mean-versus-median imputation experiment was conducted previously. Its results are considered separately from the repeated experiment reported here.
 
-Model performance was evaluated using accuracy and F1 score. Mean performance and standard deviation were calculated across the five missing-data random seeds.
+## Evaluation Metrics
 
-The results were compared across different missing-data levels and machine learning models to determine how increasing missing data affected prediction performance.
+Model performance was evaluated using accuracy and F1 score. For each combination of missing-data level and model, the mean and standard deviation of both metrics were calculated across the five random-seed runs.
+
+The results were compared across missing-data levels and models to assess changes in predictive performance as the proportion of missing training data increased.

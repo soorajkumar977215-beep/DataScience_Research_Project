@@ -1,15 +1,17 @@
-Study Limitations
+# Study Limitations
 
-This study has several limitations.
+This study has several limitations that should be considered when interpreting the results.
 
-First, the study uses only one dataset, the Banknote Authentication dataset. Therefore, the findings may not represent the behavior of machine learning models on other types of datasets.
+First, the study uses only the Banknote Authentication dataset, which contains four numerical input features. The findings may not generalize to datasets with different sizes, feature types, class distributions, or levels of complexity.
 
-Second, missing values were introduced artificially into the training data. The missing values were generated randomly at different percentages. Real-world missing data may occur through different mechanisms and may not be completely random.
+Second, missing values were artificially introduced into the training features using random masks at predefined percentages. This procedure represents a controlled missing-data scenario but does not capture all real-world missing-data mechanisms. In particular, missingness related to observed or unobserved data characteristics was not investigated.
 
-Third, the study compares only three basic machine learning models: Logistic Regression, Decision Tree, and Random Forest. Other machine learning algorithms may respond differently to missing data.
+Third, the study evaluates only three classification algorithms: Logistic Regression, Decision Tree, and Random Forest. Other algorithms, including methods specifically designed to handle missing values, may respond differently to increasing missingness.
 
-Fourth, the study uses a fixed 80:20 train-test split. Although multiple missing-data seeds were used, different train-test splits may produce different results.
+Fourth, the experiments use a fixed stratified 80:20 train-test split. Although five random seeds were used to generate different missing-data patterns, the train-test split itself was not repeated. Consequently, the reported variability reflects changes across missing-data patterns rather than variability across different train-test splits.
 
-Fifth, only mean and median imputation were compared. Other missing-data handling methods, such as KNN imputation, iterative imputation, or multiple imputation, were not investigated.
+Fifth, median imputation was used in the repeated missing-data experiment. The main repeated experiment therefore does not establish whether median imputation is superior to other imputation strategies. A separate mean-versus-median comparison must be interpreted independently using its verified results. More advanced approaches, such as K-nearest-neighbor imputation, iterative imputation, and multiple imputation, were not evaluated in the repeated experiment.
 
-Finally, the study evaluates the models using one dataset and a controlled experimental setup. Therefore, the results should be interpreted as findings from this experimental setting rather than general conclusions about all machine learning applications.
+Finally, the test set was kept complete while missing values were introduced only into the training features. The findings therefore describe model performance under this specific evaluation setup and may not reflect scenarios in which missing values are also present in the test data.
+
+Future research should evaluate additional datasets, missing-data mechanisms, train-test splits, algorithms, and imputation strategies to assess the robustness and generalizability of these findings.

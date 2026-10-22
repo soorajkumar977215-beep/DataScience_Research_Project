@@ -1,5 +1,5 @@
-References
+# References
 
-Marlin, B. M. (2008). Missing Data Problems in Machine Learning. PhD thesis, University of Toronto.
+Marlin, B. M. (2008). *Missing Data Problems in Machine Learning* [Doctoral dissertation, University of Toronto]. https://people.cs.umass.edu/~marlin/research/phd_thesis/marlin-phd-thesis.pdf
 
-Radišić, B., Seljan, S., & Dunđer, I. (2023). Impact of missing values on the performance of machine learning algorithms.
+Radišić, B., Seljan, S., & Dunđer, I. (2023). Impact of missing values on the performance of machine learning algorithms. In *Proceedings of the 5th International Conference on Recent Trends and Applications in Computer Science and Information Technology (RTA-CSIT)* (pp. 54–62). University of Tirana, Faculty of Natural Sciences, Department of Informatics. https://ceur-ws.org/Vol-3402/paper07.pdf

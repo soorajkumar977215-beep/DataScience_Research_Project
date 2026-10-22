@@ -1,13 +1,13 @@
-Discussion
+# Discussion
 
-The results generally support the main hypothesis that increasing missing data can reduce machine learning prediction performance. However, the effect was different for the three models used in this study.
+The results indicate that increasing the proportion of missing training data was generally associated with reduced predictive performance in the three machine learning models evaluated in this study. However, the magnitude of the reduction differed across models.
 
-Logistic Regression showed the largest decrease in performance as missing data increased. Decision Tree also showed a noticeable decrease, while Random Forest showed the smallest overall decrease in this experimental setup.
+Logistic Regression showed the largest decrease in mean accuracy, from 98.55% with no artificially introduced missing data to 90.84% at 40% missing data. Decision Tree accuracy decreased from 99.27% to 95.78%, while Random Forest accuracy decreased from 99.64% to 98.11%. These findings suggest that, under the experimental conditions used in this study, Random Forest was less affected by increasing missingness than the other two evaluated models.
 
-These results suggest that different machine learning models may have different levels of sensitivity to missing data. Random Forest maintained relatively high performance even at higher missing-data levels, while Logistic Regression experienced a larger decrease.
+The differences in performance highlight the importance of evaluating missing-data effects across multiple algorithms rather than assuming that all models respond similarly. Nevertheless, these results do not establish that Random Forest is universally more robust to missing data. Model performance may differ with the dataset, feature characteristics, missing-data mechanism, and preprocessing strategy.
 
-The repeated experiments were important because different random missing-data patterns produced some variation in model performance. Therefore, using only one missing-data pattern could give a less reliable view of the effect.
+Repeating the experiments with five random seeds provided an indication of how performance varied across different artificially generated missing-data patterns. The observed standard deviations showed that the extent of this variation differed among models. These repeated runs offer more information than a single missing-data pattern, although five seeds provide only a limited assessment of variability.
 
-The comparison of mean and median imputation showed that neither method was consistently better at every missing-data level. Their differences were generally small at lower missing-data levels, while median imputation performed better at 40% missing data for all three models.
+The findings should be interpreted in light of the study's limitations. The experiments used one dataset, three classification algorithms, artificially generated random missing values in the training features, and median imputation. The test set remained complete, so the experiments specifically evaluated the effect of missing training data when predictions were assessed on complete test data. The findings may not represent situations in which missing values occur in the test data or arise through real-world mechanisms such as missingness related to particular feature values.
 
-The findings should be interpreted within the limitations of the study. The experiments used one dataset, three machine learning models, artificially generated random missing values, and two simple imputation methods. Therefore, the results cannot be generalized to all datasets or real-world missing-data situations.
+Overall, the experiments demonstrate that the effect of increasing missing training data differed across the three evaluated models. Further studies using additional datasets, missing-data mechanisms, imputation strategies, and model families are needed to determine how broadly these patterns apply.

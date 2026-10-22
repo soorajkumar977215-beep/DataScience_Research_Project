@@ -1,13 +1,11 @@
-Conclusion
+# Conclusion
 
-This study investigated how different levels of missing data affect the performance of basic machine learning models.
+This study investigated the effect of increasing levels of missing training data on the predictive performance of three machine learning models: Logistic Regression, Decision Tree, and Random Forest. The experiments were conducted using the Banknote Authentication dataset, with artificially introduced missing values ranging from 0% to 40%. Model performance was evaluated using accuracy and F1 score.
 
-The experiments were conducted using the Banknote Authentication dataset and three machine learning models: Logistic Regression, Decision Tree, and Random Forest. Missing values were artificially introduced at different levels from 0% to 40%. The models were evaluated using accuracy and F1 score.
+The results showed that increasing the proportion of missing training data generally reduced predictive performance, although the magnitude of the reduction varied across models. Mean accuracy for Logistic Regression decreased from 98.55% with no artificially introduced missing data to 90.84% at 40% missing data. Decision Tree accuracy decreased from 99.27% to 95.78%, while Random Forest accuracy decreased from 99.64% to 98.11%.
 
-The results showed that increasing missing data generally reduced model performance. Logistic Regression showed the largest decrease in mean accuracy, from 98.55% at 0% missing data to 90.47% at 40% missing data. Decision Tree decreased from 99.27% to 93.89%, while Random Forest decreased from 99.64% to 97.96%.
+Among the three evaluated models, Random Forest showed the smallest decrease in mean accuracy, at 1.53 percentage points, while Logistic Regression showed the largest decrease, at 7.71 percentage points. These findings suggest that the models differed in their sensitivity to missing training data under the experimental conditions used in this study. However, the results do not establish that the same performance patterns will hold across other datasets or experimental settings.
 
-The results also showed that different machine learning models responded differently to missing data. In this experimental setup, Random Forest showed the smallest overall performance decrease.
+The repeated experiments used median imputation and five random seeds to examine performance across different missing-data patterns. Although a separate experiment compared mean and median imputation, its findings should be reported independently and only after its results have been verified. The repeated experiment presented in this study does not establish that median imputation is superior to mean imputation.
 
-The study also compared mean and median imputation. The differences between the two methods were generally small at lower missing-data levels. At 40% missing data, median imputation produced higher mean accuracy for all three models.
-
-Overall, the findings indicate that missing data can negatively affect machine learning prediction performance and that the effect can differ between machine learning models. Simple preprocessing methods such as mean and median imputation can help models handle missing values, but their effectiveness may depend on the model and the amount of missing data.
+Overall, this study demonstrates that missing training data can affect machine learning prediction performance differently across models. Future work should investigate additional datasets, missing-data mechanisms, imputation methods, and classification algorithms, as well as different train-test splits. Such experiments would help establish whether the observed patterns generalize to a wider range of machine learning applications.
